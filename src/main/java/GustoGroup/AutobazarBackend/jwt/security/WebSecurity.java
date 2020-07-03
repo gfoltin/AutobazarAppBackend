@@ -59,8 +59,8 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
     UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
     CorsConfiguration config = new CorsConfiguration();
     config.setAllowCredentials(true);
-    config.addAllowedOrigin("*");
-    config.addAllowedHeader("*");
+    config.addAllowedOrigin("https://autobazar-app.herokuapp.com");
+    config.addAllowedHeader("Content-Type");
     config.addAllowedMethod("*");
     source.registerCorsConfiguration("/**", config);
     return source;
