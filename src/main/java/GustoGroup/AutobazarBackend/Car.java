@@ -13,14 +13,15 @@ public class Car {
 	private String name;
 	private String color;
 	private String engine;
-	private String description;
+	private String price;
+	private String email;
 	private String available;
 	
 	protected Car(){
 		
 	}
-	
-	public Car(Long id, String username, String name, String color, String engine, String description,
+
+	public Car(Long id, String username, String name, String color, String engine, String price, String email,
 			String available) {
 		super();
 		this.id = id;
@@ -28,7 +29,8 @@ public class Car {
 		this.name = name;
 		this.color = color;
 		this.engine = engine;
-		this.description = description;
+		this.price = price;
+		this.email = email;
 		this.available = available;
 	}
 
@@ -72,12 +74,20 @@ public class Car {
 		this.engine = engine;
 	}
 
-	public String getDescription() {
-		return description;
+	public String getPrice() {
+		return price;
 	}
 
-	public void setDescription(String description) {
-		this.description = description;
+	public void setPrice(String price) {
+		this.price = price;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public String getAvailable() {

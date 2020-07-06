@@ -39,7 +39,6 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
         		.authorizeRequests()
                 .antMatchers(HttpMethod.POST, SIGN_UP_URL).permitAll()
                 .antMatchers("/console/**").permitAll()
-                .antMatchers("https://autobazar-app.herokuapp.com").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .addFilter(new JWTAuthenticationFilter(authenticationManager()))
@@ -59,7 +58,7 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
     UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
     CorsConfiguration config = new CorsConfiguration();
     config.setAllowCredentials(true);
-    config.addAllowedOrigin("https://autobazar-app.herokuapp.com");
+    config.addAllowedOrigin("https://autobazar-app.herokuapp.com"); // http://localhost:4200
     config.addAllowedHeader("*");
     config.addAllowedMethod("*");
     source.registerCorsConfiguration("/**", config);
